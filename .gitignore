@@ -1,0 +1,5 @@
+node_modules/
+.traceforge*/
+coverage/
+*.tgz
+.DS_Store

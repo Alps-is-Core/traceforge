@@ -1,0 +1,48 @@
+{
+  "name": "@alps-is-core/traceforge",
+  "version": "0.1.0",
+  "description": "Local reverse-engineering workbench with evidence, diffs, graphs, reports and REA agent tools.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "traceforge": "src/cli.js"
+  },
+  "exports": "./src/core.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs",
+    "licenses",
+    "examples"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alps-is-Core/traceforge.git"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check src/core.js && node --check src/analyzers.js && node --check src/cli.js && node --check src/mcp.js && node --check src/report.js && node --check src/engine.js && node --check src/brief.js && node --check src/report-app.js && node --check tests/browser.e2e.js",
+    "demo": "node src/cli.js inspect examples/sample-app --workspace .traceforge-demo --label 'Sample Electron app'",
+    "demo:ui": "node src/cli.js dashboard --workspace .traceforge-demo",
+    "start": "node src/cli.js",
+    "mcp": "node src/cli.js mcp",
+    "test:browser": "node --test tests/browser.e2e.js",
+    "format": "prettier --write src tests docs README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md package.json .github",
+    "format:check": "prettier --check src tests docs README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md package.json .github"
+  },
+  "dependencies": {
+    "@babel/parser": "8.0.4",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "rea-agents": "6.4.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "playwright-core": "1.58.2",
+    "prettier": "3.6.2"
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"sample-electron-app","version":"1.0.0","main":"main.cjs","dependencies":{"electron":"^36.0.0"}}
