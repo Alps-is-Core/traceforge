@@ -5,6 +5,8 @@ Verified locally on 13 October 2026 with Node.js v22.23.1, npm 10.9.8, macOS, in
 ## Passing checks
 
 - Syntax checks for every runtime JavaScript module and the browser test.
+- Prettier formatting checks across source, tests, documentation and workflow configuration.
+- Release archive install into a fresh local package directory, followed by the packaged doctor and static inspection CLI.
 - 16 core/integration tests with zero skips.
 - A separate real Chromium browser test with zero skips.
 - Real CLI sequence: inspect → modify target → inspect → compare → search → export HTML.
